@@ -33,6 +33,12 @@
               {
                 "group": "Untitled Group",
                 "pages": [
+                  {
+                    "group": "another",
+                    "pages": [
+                      "guides/testinger/untitled-group/another/some-as-well-idk"
+                    ]
+                  },
                   "guides/testinger/untitled-group/untitled-page"
                 ]
               },
