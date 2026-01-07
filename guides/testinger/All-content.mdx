@@ -50,18 +50,66 @@ description: "Will be located here"
 </Columns>
 
 ```python
-print("bop")
+mylist = [64, 34, 25, 12, 22, 11, 90, 5]
+
+n = len(mylist)
+for i in range(n-1):
+  for j in range(n-i-1):
+    if mylist[j] > mylist[j+1]:
+      mylist[j], mylist[j+1] = mylist[j+1], mylist[j]
+
+print(mylist)
 ```
 
 <CodeGroup>
 
-```filename
-flopen
+```python
+mylist = [64, 34, 25, 12, 22, 11, 90, 5]
+
+n = len(mylist)
+for i in range(n-1):
+  for j in range(n-i-1):
+    if mylist[j] > mylist[j+1]:
+      mylist[j], mylist[j+1] = mylist[j+1], mylist[j]
+
+print(mylist)
 ```
 
 
 ```c++ File 2
-bopen
+// C++ program for the implementation of Bubble sort
+#include <bits/stdc++.h>
+using namespace std;
+
+void bubbleSort(vector<int>& v) {
+    int n = v.size();
+
+    // Outer loop that corresponds to the number of
+    // elements to be sorted
+    for (int i = 0; i < n - 1; i++) {
+
+        // Last i elements are already
+        // in place
+        for (int j = 0; j < n - i - 1; j++) {
+          
+          	// Comparing adjacent elements
+            if (v[j] > v[j + 1])
+              
+              	// Swapping if in the wrong order
+                swap(v[j], v[j + 1]);
+        }
+    }
+}
+
+int main() {
+    vector<int> v = {5, 1, 4, 2, 8};
+
+    // Sorting the vector v
+    bubbleSort(v);
+    for (auto i : v)
+        cout << i << " ";
+    return 0;
+}
 ```
 
 </CodeGroup>
