@@ -35,7 +35,8 @@
                 "pages": [
                   "essentials/settings",
                   "essentials/navigation",
-                  "essentials/all-components"
+                  "essentials/all-components",
+                  "essentials/nested-components"
                 ]
               },
               {
